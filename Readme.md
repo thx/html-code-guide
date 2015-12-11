@@ -12,7 +12,7 @@
   <dt>编辑：</dt>
   <dd>[壹丝](https://github.com/yisibl)</dd>
   <dt>反馈：</dt>
-  <dd>[Issue](Issue)</dd>
+  <dd>[Issue](https://github.com/thx/html-code-guide/issues)</dd>
   <dt>最后更新：</dt>
   <dd>2015-11-27</dd>
 </dl>
