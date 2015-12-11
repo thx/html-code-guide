@@ -1,0 +1,19 @@
+{
+  "name": "html-code-guide",
+  "version": "0.0.1",
+  "description": "HTML Code Guide",
+  "keywords": [
+    "code guide",
+    "html"
+  ],
+  "author": "壹丝",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:thx/html-code-guide.git"
+  },
+  "homepage": "https://github.com/thx/html-code-guide/",
+  "devDependencies": {
+    "vmd": "^1.13.0"
+  }
+}

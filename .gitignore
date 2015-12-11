@@ -1,0 +1,20 @@
+# https://github.com/github/gitignore/tree/master/
+node_modules
+.DS_Store
+*.swp
+*.swo
+*.iml
+.idea/
+.sass-cache/
+npm-debug.log
+*.sublime-workspace
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Windows shortcuts
+*.lnk
