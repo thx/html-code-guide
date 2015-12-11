@@ -116,9 +116,9 @@ HTML 作为网页内容承载的基石，是每个前端都会用到的语言。
   * [Using style](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element)
   * [Using script](http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element)
 
-### [建议] 在 head 中引入页面需要的所有 CSS 资源。
+### [推荐] 在 head 中引入页面需要的所有 CSS 资源。
 
-### [建议] JavaScript 应当放在页面末尾（也就是`</body>`之前），或采用异步加载。
+### [推荐] JavaScript 应当放在页面末尾（也就是`</body>`之前），或采用异步加载。
 
 ```html
 <body>
@@ -129,7 +129,7 @@ HTML 作为网页内容承载的基石，是每个前端都会用到的语言。
 ```
 
 
-### [建议] 移动页面或无需兼容 IE8 以下的页面省略资源协议。
+### [推荐] 移动页面或无需兼容 IE8 以下的页面省略资源协议。
 
 使用[协议相对 URL](http://paulirish.com/2010/the-protocol-relative-url/)（Protocol-relative URL）引入 CSS，在 IE7/8 下，会发两次请求。是否使用应充分考虑页面针对的环境。
 
@@ -157,6 +157,8 @@ HTML 作为网页内容承载的基石，是每个前端都会用到的语言。
   ```html
   <meta name="renderer" content="webkit">
   ```
+
+更多：[常用的 HTML 头部标签](https://github.com/yisibl/blog/issues/1#user-content-360)
 
 ### [可选]添加 favicon icon。
 
