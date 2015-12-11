@@ -150,6 +150,14 @@ HTML 作为网页内容承载的基石，是每个前端都会用到的语言。
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1">
   ```
 
+### [可选]设置 360 浏览器为极速模式。
+
+  `webkit` 为极速内核，`ie-comp` 为 IE 兼容内核，`ie-stand` 为 IE 标准内核。
+
+  ```html
+  <meta name="renderer" content="webkit">
+  ```
+
 ### [可选]添加 favicon icon。
 
 ```html
@@ -168,6 +176,7 @@ HTML 作为网页内容承载的基石，是每个前端都会用到的语言。
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
   <meta name ="viewport" content ="initial-scale=1, maximum-scale=1, minimum-scale=1">
   <meta name="format-detection" content="telephone=no">
 
@@ -357,7 +366,7 @@ HTML5 中表示强烈的重要性、严重性或内容的紧迫性。`strong` �
 
 示例：
 
-「第一章」仅仅是个引用，`strong`` 里的内容才是真正的章节名。
+「第一章」仅仅是个引用，`strong` 里的内容才是真正的章节名。
 
 ```html
 <h1>第一章 <strong>启程</strong></h1>
@@ -472,7 +481,7 @@ HTML5 中表示强烈的重要性、严重性或内容的紧迫性。`strong` �
   <dd>使用 header 或 div 来分组</dd>
 </dl>
 
-## [废弃的属性]()
+## [废弃的属性](http://www.w3.org/TR/html5/obsolete.html#non-conforming-features)
 
 绝大部分 HTML4 中控制样式的属性都被废除，例如 `align`, `valign`, `bgcolor` 等。
 
@@ -483,8 +492,6 @@ HTML5 中表示强烈的重要性、严重性或内容的紧迫性。`strong` �
 * `script` 的 `language` 属性。如果存在其值必须是 `JavaScript` (不区分大小写)，并且不能与 `type` 属性冲突。作者可以简单地忽略它，因为它没什么作用。
 
 * `a` 的 `name` 属性。Web 开发者可以使用 `id` 属性代替。
-
-更多参考：http://www.w3.org/TR/html5/obsolete.html#non-conforming-features
 
 
 
