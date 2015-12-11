@@ -10,9 +10,9 @@
 
 <dl>
   <dt>编辑：</dt>
-  <dd>[壹丝](https://github.com/yisibl)</dd>
+  <dd><a href="https://github.com/yisibl" target="_blank">壹丝</a></dd>
   <dt>反馈：</dt>
-  <dd>[Issue](https://github.com/thx/html-code-guide/issues)</dd>
+  <dd><a href="https://github.com/thx/html-code-guide/issues" target="_blank">Issue</a></dd>
   <dt>最后更新：</dt>
   <dd>2015-11-27</dd>
 </dl>
@@ -57,7 +57,7 @@ HTML 作为网页内容承载的基石，是每个前端都会用到的语言。
 </html>
 ```
 
-### [强制]在`head` 中添加 `title` 标签
+### [强制]在 `head` 中添加 `title` 标签
 
 ### [强制]优先使用 IE 最新版本。
 
@@ -262,7 +262,7 @@ HTML5 中对 HTML4 中的一些标签重新定义或修改了语义。
   </dl>
   ```
 
-* [推荐]FAQ 通常也适合使用 dl 元素。
+* [推荐]FAQ 通常也可以使用 `dl` 元素。
 
   ```html
   <article>
@@ -290,7 +290,7 @@ HTML5 中对 HTML4 中的一些标签重新定义或修改了语义。
 
 ### <code class="external"><a href="http://www.w3.org/TR/html5/single-page.html#the-b-element">b</a></code> 元素
 
-HTML4 中`b`元素只是一个用于将文本显示为粗体的表现性元素（presentational elements）。
+HTML4 中 `b` 元素只是一个用于将文本显示为粗体的表现性元素（presentational elements）。
 
 HTML5 中代表一段文本，这段文本仅仅出于功利的目的被提请注意，这种目的里**没有传达任何额外的重要性**，也没有交替的语言和心情的意味，比如文档摘要的关键字，审查中的产品名，文本驱动的交互软件的可操作词，或文章的导引。
 
@@ -309,7 +309,7 @@ HTML5 中代表一段文本，这段文本仅仅出于功利的目的被提请�
 
 ### <code class="external"><a href="http://www.w3.org/TR/html5/single-page.html#the-i-element">i</a></code> 元素
 
-HTML4 中`i`元素只是一个用于将文本显示为斜体的表现性元素，很像`b`标签被用来将文本显示为粗体。
+HTML4 中 `i` 元素只是一个用于将文本显示为斜体的表现性元素，类似的 `b` 标签被用来将文本显示为粗体。
 
 但 HTML5 中赋予了新的语义，用来表示一段有着交替的语言和心情意味的文本，或者用来表明一种不同的文本质量的方式偏离平常的散文，比如分类命名，技术术语，其它语言的惯用短语，一个念头，画外音，或西文的船名。
 
@@ -385,12 +385,12 @@ HTML5 中表示强烈的重要性、严重性或内容的紧迫性。`strong` �
 
 ### <code class="external"><a href="http://www.w3.org/TR/html5/single-page.html#the-s-element">figure</a></code> 元素
 
-不仅仅是用来标记图片，可以是音频、视频、代码、引用、表格等。而且只有当这些内容属于文档一部分时，才应该使用 figure 元素包裹起来。
+不仅仅是用来标记图片，可以是音频、视频、代码、引用、表格等。而且只有当这些内容属于文档一部分时，才应该使用 `figure` 元素包裹起来。
 
 ## 可访问性
 
 * [推荐] 重要的 `img` 标签添加有意义的 `alt` 属性文案。
-* [推荐] 移动页面可以根据内容类型指定相应的 `input` type 属性（截图来自 iOS 9.1 Safari）。
+* [推荐] 移动页面可以根据内容类型指定相应的 `input` `type` 属性（截图来自 iOS 9.1 Safari）。
 
 ```html
   <input type="number" placeholder="number">
@@ -440,7 +440,7 @@ HTML5 中表示强烈的重要性、严重性或内容的紧迫性。`strong` �
 
 ## [废弃的元素](http://www.w3.org/TR/html5/obsolete.html#non-conforming-features)
 
-以下元素不在HTML5 规范内，因为它们是纯粹表象（样式）的元素，应该使用 CSS来代替。
+以下元素不在 HTML5 规范内，因为它们是纯粹表象（样式）的元素，应该使用 CSS 来代替。
 
 * `basefont`
 * `big`
@@ -453,7 +453,7 @@ HTML5 中表示强烈的重要性、严重性或内容的紧迫性。`strong` �
 * `spacer`
 * `tt`
 
-以下元素不在HTML5 规范内，因为使用它们会破坏可用性和可访问性。
+以下元素不在 HTML5 规范内，因为使用它们会破坏可用性和可访问性。
 
 * `frame`
 * `frameset`
@@ -478,11 +478,11 @@ HTML5 中表示强烈的重要性、严重性或内容的紧迫性。`strong` �
 
 以下这些属性允许使用，但是不鼓励Web开发者使用它们，而是强烈鼓励使用替代的解决方案:
 
-* img 的 border 属性。如果存在其值必须是"0"。Web开发者可以使用CSS代替。
+* `img` 的 `border` 属性。如果存在其值必须是 `0`。Web开发者可以使用 CSS 代替。
 
-* script 的 language 属性。如果存在其值必须是"JavaScript"(不区分大小写)，并且不能与 type 属性冲突。作者可以简单地忽略它，因为它没什么作用。
+* `script` 的 `language` 属性。如果存在其值必须是 `JavaScript` (不区分大小写)，并且不能与 `type` 属性冲突。作者可以简单地忽略它，因为它没什么作用。
 
-* a 的 name 属性。Web开发者可以使用 id 属性代替。
+* `a` 的 `name` 属性。Web 开发者可以使用 `id` 属性代替。
 
 更多参考：http://www.w3.org/TR/html5/obsolete.html#non-conforming-features
 
@@ -506,7 +506,7 @@ HTML5 中表示强烈的重要性、严重性或内容的紧迫性。`strong` �
 
 ### [可选]添加网页搜索引擎索引方式
 
-可以控制搜索引擎的抓取和索引编制行为，指定多个值时，请使用英文逗号进行分隔，通常有如下几种取值：none，noindex，nofollow，all，index 和 follow。默认值是`index, follow`（相当于`all`），不需要进行指定。
+可以控制搜索引擎的抓取和索引编制行为，指定多个值时，请使用英文逗号进行分隔，通常有如下几种取值：`none，noindex，nofollow，all，index` 和 `follow`。默认值是`index, follow`（相当于`all`），不需要进行指定。
 
 ```html
 <meta name="robots" content="noindex,follow">
