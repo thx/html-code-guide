@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">HTML Code Guide <br></h1>
+<h1 align="center">HTML Code Guide</h1>
 
 > HTML 编写指南
 
@@ -39,7 +39,7 @@ HTML 作为网页内容承载的基石，是每个前端都会用到的语言。
 
 ### [强制]使用无 BOM 信息的 UTF-8 编码。
 
-* `<meta charset="UTF-8">` 必须是 `head` 的第一个子元素。
+* `<meta charset="UTF-8">`，必须是 `head` 的第一个子元素，因为如果 [HTTP Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) 中没有指定 charset，这样可以让浏览器尽早获取字符编码信息。
 * 包括空格和 DOCTYPE 声明在内，要在前512个字节以内。
 
 详见：[HTML5 Charset能用吗？](http://www.qianduan.net/html5-charset-can-it/)
@@ -57,7 +57,9 @@ HTML 作为网页内容承载的基石，是每个前端都会用到的语言。
 </html>
 ```
 
-### [强制]在 `head` 中添加 `title` 标签
+### [强制]在 `head` 中添加 `title` 标签。
+
+推荐紧随 `<meta charset>` 标签之后，让浏览器优先获取页面标题。
 
 ### [强制]优先使用 IE 最新版本。
 
@@ -66,7 +68,7 @@ HTML 作为网页内容承载的基石，是每个前端都会用到的语言。
 ```
 
 
-### [推荐]使用更加标准的 lang 属性值 http://zhi.hu/XyIa。
+### [推荐]使用更[加标准的 lang 属性值](http://zhi.hu/XyIa)。
 
 简体中文：
 
@@ -88,7 +90,7 @@ HTML 作为网页内容承载的基石，是每个前端都会用到的语言。
 </p>
 ```
 
-如果是个人编写的页面可以带上个人后缀，比如 HTML5 规范主要是由 Ian Hickson 来编写的，首页的 `lang` 写法为：
+如果是个人编写的页面可以带上个人后缀，比如 HTML5 规范主要是由 Ian Hickson 来编写的，[首页](http://www.w3.org/TR/2014/REC-html5-20141028/)的 `lang` 写法为：
 
 ```html
 <html lang="en-US-x-Hixie">
@@ -150,13 +152,41 @@ HTML 作为网页内容承载的基石，是每个前端都会用到的语言。
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1">
   ```
 
+### [推荐]为 CDN 域名添加 DNS 预解析 `dns-prefetch`。
+
+DNS 解析是指把一个域名解析为实际的 IP 地址，这是一个比较耗时过程，而且这个时间充满变数，最慢的可能需要数秒时间。
+
+DNS 预解析（DNS Prefetching）则可以让浏览器在空闲时对定义好的域名解析缓存，当用户点击当前网页中的链接时就无需再进行 DNS 的解析，减少了用户等待时间。
+
+* Chrome 中可以打开 `chrome://net-internals/#dns` 查看 DNS 缓存情况。
+* Firefox 中可以打开 `about:networking` 中的 DNS 选项卡查看。
+
+
+<figure>
+  <figcaption>Firefox 中查看 DNS Prefetching</figcaption>
+  <img src="http://gtms01.alicdn.com/tps/i1/TB1c0lyLXXXXXaRXpXXHfo13XXX-537-149.png" alt="">
+</figure>
+
+通常阿里的网站可以添加下面两个域名，其他业务可酌情添加需要的域名。
+
+```html
+<link rel="dns-prefetch" href="//g.alicdn.com">
+<link rel="dns-prefetch" href="//gw.alicdn.com">
+```
+
+更多参考：
+
+* [Chrome 文档](http://dev.chromium.org/developers/design-documents/dns-prefetching)
+* [MDN 文档](https://developer.mozilla.org/en-US/docs/Web/HTTP/Controlling_DNS_prefetching)
+* [文章：HTML5 Prefetch](https://medium.com/@luisvieira_gmr/html5-prefetch-1e54f6dda15d#.uwimv3tc8)
+
 ### [可选]设置 360 浏览器为极速模式。
 
-  `webkit` 为极速内核，`ie-comp` 为 IE 兼容内核，`ie-stand` 为 IE 标准内核。
+`webkit` 为极速内核，`ie-comp` 为 IE 兼容内核，`ie-stand` 为 IE 标准内核。
 
-  ```html
-  <meta name="renderer" content="webkit">
-  ```
+```html
+<meta name="renderer" content="webkit">
+```
 
 更多：[常用的 HTML 头部标签](https://github.com/yisibl/blog/issues/1#user-content-360)
 
@@ -177,12 +207,13 @@ HTML 作为网页内容承载的基石，是每个前端都会用到的语言。
 <html lang="zh-cmn-Hans">
 <head>
   <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="dns-prefetch" href="//g.alicdn.com">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="renderer" content="webkit">
   <meta name ="viewport" content ="initial-scale=1, maximum-scale=1, minimum-scale=1">
   <meta name="format-detection" content="telephone=no">
 
-  <title>Document</title>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
