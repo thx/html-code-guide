@@ -156,7 +156,7 @@ HTML 作为网页内容承载的基石，是每个前端都会用到的语言。
 
 DNS 解析是指把一个域名解析为实际的 IP 地址，这是一个比较耗时过程，而且这个时间充满变数，最慢的可能需要数秒时间。
 
-DNS 预解析（DNS Prefetching）则可以让浏览器在空闲时对定义好的域名解析缓存，当用户点击当前网页中的链接时就无需再进行 DNS 的解析，减少了用户等待时间。
+DNS 预解析（DNS Prefetching）则可以让浏览器在空闲时对定义好的域名解析缓存，当用户点击当前网页中的链接时就无需再进行 DNS 的解析，减少了用户等待时间。IE9 及其他主流浏览器均已支持（[详见：caniuse.com](http://caniuse.com/#feat=link-rel-dns-prefetch)）。
 
 * Chrome 中可以打开 `chrome://net-internals/#dns` 查看 DNS 缓存情况。
 * Firefox 中可以打开 `about:networking` 中的 DNS 选项卡查看。
