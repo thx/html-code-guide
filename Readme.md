@@ -161,11 +161,10 @@ DNS 预解析（DNS Prefetching）则可以让浏览器在空闲时对定义好�
 * Chrome 中可以打开 `chrome://net-internals/#dns` 查看 DNS 缓存情况。
 * Firefox 中可以打开 `about:networking` 中的 DNS 选项卡查看。
 
-<p align="center">
-  **Firefox 中查看 DNS Prefetching**
-  <img src="http://gtms01.alicdn.com/tps/i1/TB1c0lyLXXXXXaRXpXXHfo13XXX-537-149.png" alt="">
-</p>
-
+<div align="center">
+  <p>Firefox 中查看 DNS Prefetching</p>
+  <p><img src="http://gtms01.alicdn.com/tps/i1/TB1c0lyLXXXXXaRXpXXHfo13XXX-537-149.png" alt=""></p>
+</div>
 
 通常阿里的网站可以添加下面两个域名，其他业务可酌情添加需要的域名。
 
