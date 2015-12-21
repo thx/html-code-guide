@@ -118,9 +118,9 @@ HTML 作为网页内容承载的基石，是每个前端都会用到的语言。
   * [Using style](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element)
   * [Using script](http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element)
 
-### [推荐] 在 head 中引入页面需要的所有 CSS 资源。
+### [推荐]在 head 中引入页面需要的所有 CSS 资源。
 
-### [推荐] JavaScript 应当放在页面末尾（也就是`</body>`之前），或采用异步加载。
+### [推荐]JavaScript 应当放在页面末尾（也就是`</body>`之前），或采用异步加载。
 
 ```html
 <body>
@@ -131,7 +131,7 @@ HTML 作为网页内容承载的基石，是每个前端都会用到的语言。
 ```
 
 
-### [推荐] 移动页面或无需兼容 IE8 以下的页面省略资源协议。
+### [推荐]移动页面或无需兼容 IE8 以下的页面省略资源协议。
 
 使用[协议相对 URL](http://paulirish.com/2010/the-protocol-relative-url/)（Protocol-relative URL）引入 CSS，在 IE7/8 下，会发两次请求。是否使用应充分考虑页面针对的环境。
 
@@ -430,8 +430,8 @@ HTML5 中表示强烈的重要性、严重性或内容的紧迫性。`strong` �
 
 ## 可访问性
 
-* [推荐] 重要的 `img` 标签添加有意义的 `alt` 属性文案。
-* [推荐] 移动页面可以根据内容类型指定相应的 `input` `type` 属性（截图来自 iOS 9.1 Safari）。
+* [推荐]重要的 `img` 标签添加有意义的 `alt` 属性文案。
+* [推荐]移动页面可以根据内容类型指定相应的 `input` `type` 属性（截图来自 iOS 9.1 Safari）。
 
 ```html
   <input type="number" placeholder="number">
@@ -551,4 +551,6 @@ HTML5 中表示强烈的重要性、严重性或内容的紧迫性。`strong` �
 <meta name="robots" content="noindex,follow">
 ```
 
-更多：https://support.google.com/webmasters/answer/79812?hl=zh-Hans&ref_topic=4617741
+更多参考：
+
+* [Goolge 文档](https://support.google.com/webmasters/answer/79812?hl=zh-Hans&ref_topic=4617741)
