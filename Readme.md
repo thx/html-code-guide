@@ -14,7 +14,7 @@
   <dt>反馈：</dt>
   <dd><a href="https://github.com/thx/html-code-guide/issues" target="_blank">Issue</a></dd>
   <dt>最后更新：</dt>
-  <dd>2015-12-11</dd>
+  <dd>2015-12-21</dd>
 </dl>
 
 <p>Copyright © 2015 THX</p>
