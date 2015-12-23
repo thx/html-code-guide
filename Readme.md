@@ -27,8 +27,28 @@
 HTML 作为网页内容承载的基石，是每个前端都会用到的语言。在开发过程中保持一致的编码风格尤为重要，
 使其能够更加容易理解和维护。
 
-----
+### 通用模板
 
+```html
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name ="viewport" content ="initial-scale=1, maximum-scale=1, minimum-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<script src="index.js"></script>
+</body>
+</html>
+```
+
+----
 ## Head
 
 ### [强制]使用 HTML5 DOCTYPE。
@@ -152,7 +172,7 @@ HTML 作为网页内容承载的基石，是每个前端都会用到的语言。
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1">
   ```
 
-### [推荐]为 CDN 域名添加 DNS 预解析 `dns-prefetch`。
+### [可选]为 CDN 域名添加 DNS 预解析 `dns-prefetch`。
 
 DNS 解析是指把一个域名解析为实际的 IP 地址，这是一个比较耗时过程，而且这个时间充满变数，最慢的可能需要数秒时间。
 
@@ -166,7 +186,7 @@ DNS 预解析（DNS Prefetching）则可以让浏览器在空闲时对定义好�
   <p><img src="http://gtms01.alicdn.com/tps/i1/TB1c0lyLXXXXXaRXpXXHfo13XXX-537-149.png" alt=""></p>
 </div>
 
-通常阿里的网站可以添加下面两个域名，其他业务可酌情添加需要的域名。
+通常可以在首页等重要页面添加 `dns-prefetch`，阿里的网站可以添加下面两个域名，其他业务可酌情添加需要的域名。
 
 ```html
 <link rel="dns-prefetch" href="//g.alicdn.com">
@@ -198,30 +218,6 @@ DNS 预解析（DNS Prefetching）则可以让浏览器在空闲时对定义好�
 更多用法：https://github.com/audreyr/favicon-cheat-sheet
 
 ----
-
-### 通用模板
-
-```html
-<!DOCTYPE html>
-<html lang="zh-cmn-Hans">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel="dns-prefetch" href="//g.alicdn.com">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="renderer" content="webkit">
-  <meta name ="viewport" content ="initial-scale=1, maximum-scale=1, minimum-scale=1">
-  <meta name="format-detection" content="telephone=no">
-
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-
-<script src="index.js"></script>
-</body>
-</html>
-```
-
 
 ## 语法
 
@@ -347,48 +343,6 @@ HTML5 中代表一段文本，这段文本仅仅出于功利的目的被提请�
 <p><b>警告：</b> 不要将瓶子倒立放置!</p>
 ```
 
-
-### <code class="external"><a href="http://www.w3.org/TR/html5/single-page.html#the-i-element">i</a></code> 元素
-
-HTML4 中 `i` 元素只是一个用于将文本显示为斜体的表现性元素，类似的 `b` 标签被用来将文本显示为粗体。
-
-但 HTML5 中赋予了新的语义，用来表示一段有着交替的语言和心情意味的文本，或者用来表明一种不同的文本质量的方式偏离平常的散文，比如分类命名，技术术语，其它语言的惯用短语，一个念头，画外音，或西文的船名。
-
-> 音调或情绪变化？
-
-* [推荐]标记一个惯用短语：
-
-  ```html
-  <p>拉丁文 <i>Veni, vidi, vici</i> 经常在音乐、艺术、文学中被提到。</p>
-  ```
-
-* [推荐]标记一个船名：
-
-  ```html
-  <p><i>RMS Titanic</i> 是一艘奥林匹克级邮轮，于1912年04月处女航时撞上冰山后沉没。</p>
-  ```
-
-
-**注意：** `i` 元素并不是 `icon` 的意思，标记字体图标（iconfont）时应该使用 `span` 元素。
-
-
-### 小结
-
-HTML5 中重新定义了 `b` `i` 等元素，使其具有一定的语义，而不仅仅是表现性的（[W3C 文章](http://www.w3.org/International/questions/qa-b-and-i-tags)）。
-
-无论如何，我们应当牢记，不应该使用 `b` 或 `i` 来实现加粗或倾斜的样式。
-
-* [推荐] 只有在没有更适合的文本元素时，才使用 `b`, `i` 元素。例如：
-
-  * `em` 可以表示强调或重读。
-  * `strong` 可以表示重要性。
-  * `mark` 可以表示相关性。
-  * `cite` 可以标记著作名，如一本书、剧本或是一首歌。
-  * `dfn` 可以标记术语的定义实例。
-  * `var` 可以标记数学变量。
-
-----
-
 ### <code class="external"><a href="http://www.w3.org/TR/html5/single-page.html#the-strong-element">strong</a></code> 元素
 
 HTML4 中表示强烈的强调。
@@ -418,12 +372,63 @@ HTML5 中表示强烈的重要性、严重性或内容的紧迫性。`strong` �
 <h1><strong>松树、枫树、桦树</strong>和其他我叫不出来名字的树木，郁郁葱葱的长满了屋后的山坡。</h1>
 ```
 
+----
+### <code class="external"><a href="http://www.w3.org/TR/html5/single-page.html#the-i-element">i</a></code> 元素
+
+HTML4 中 `i` 元素只是一个用于将文本显示为斜体的表现性元素，类似的 `b` 标签被用来将文本显示为粗体。
+
+但 HTML5 中赋予了新的语义，用来表示一段有着交替的语言和心情意味的文本，或者用来表明一种不同的文本质量的方式偏离平常的散文，比如分类命名，技术术语，其它语言的惯用短语，一个念头，画外音，或西文的船名。
+
+> 音调或情绪变化？
+
+* [推荐]标记一个惯用短语：
+
+  ```html
+  <p>拉丁文 <i>Veni, vidi, vici</i> 经常在音乐、艺术、文学中被提到。</p>
+  ```
+
+* [推荐]标记一个船名：
+
+  ```html
+  <p><i>RMS Titanic</i> 是一艘奥林匹克级邮轮，于1912年04月处女航时撞上冰山后沉没。</p>
+  ```
+
+
+**注意：** `i` 元素并不是 `icon` 的意思，标记字体图标（iconfont）时应该使用 `span` 元素。
+
+### <code class="external"><a href="http://www.w3.org/TR/html5/single-page.html#the-em-element">em</a></code> 元素
+
+
+### 小结
+
+http://html5doctor.com/i-b-em-strong-element/
+
+HTML5 中重新定义了 `b` `i` 等元素，使其具有一定的语义，而不仅仅是表现性的（[W3C 文章](http://www.w3.org/International/questions/qa-b-and-i-tags)）。
+
+无论如何，我们应当牢记，不应该使用 `b` 或 `i` 来实现加粗或倾斜的样式。
+
+* [推荐] 只有在没有更适合的文本元素时，才使用 `b`, `i` 元素。例如：
+
+  * `em` 可以表示强调或重读。
+  * `strong` 可以表示重要性。
+  * `mark` 可以表示相关性。
+  * `cite` 可以标记著作名，如一本书、剧本或是一首歌。
+  * `dfn` 可以标记术语的定义实例。
+  * `var` 可以标记数学变量。
+
+----
+http://html5doctor.com/ins-del-s/
+
+### <code class="external"><a href="http://www.w3.org/TR/html5/single-page.html#the-ins-element">ins</a></code> 元素
+
+### <code class="external"><a href="http://www.w3.org/TR/html5/single-page.html#the-del-element">del</a></code> 元素
 
 ### <code class="external"><a href="http://www.w3.org/TR/html5/single-page.html#the-s-element">s</a></code> 元素
 
 现在标示内容不再准确或不再有关联。
 
 
+----
 ### <code class="external"><a href="http://www.w3.org/TR/html5/single-page.html#the-s-element">figure</a></code> 元素
 
 不仅仅是用来标记图片，可以是音频、视频、代码、引用、表格等。而且只有当这些内容属于文档一部分时，才应该使用 `figure` 元素包裹起来。
